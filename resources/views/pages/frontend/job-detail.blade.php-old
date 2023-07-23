@@ -1,0 +1,247 @@
+@extends('layouts.app')
+
+@section('content')
+@include('pages.common.header')
+
+
+<style>
+    .first-section {
+    padding: 40px 0;
+    background: #505772;
+}
+.first-section h1 {
+    color: #ffff;
+}
+.in-2-second-section a.outline-btn{
+    display: block;
+    text-decoration: none;
+    color: #1d7480;
+    font-weight: 650;
+    background-color: #eaf2f8;
+    border: 1px solid #1d7480;
+    border-radius: 2.75px;
+    padding: 6.5px 0;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.in-2-second-section a.outline-btn:hover{
+    background: #1d7480;
+    color: #eaf2f8;
+}
+.second-section-row-5 h4 a{
+    text-decoration: none;
+    color: #eaf2f8;
+    font-size: 14px;
+    background-color: #1d7480;
+    padding: 8px 15px;
+    display:inline-block;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+.second-section-row-5 h4 a:hover {
+    background: #eaf2f8;
+    color: #000;
+}
+.second-section table th {
+    border: 1px solid #b0b0b0;
+    border-collapse: collapse;
+}
+.second-section table td {
+    border: 1px solid #b0b0b0;
+    border-collapse: collapse;
+}
+.second-section table {
+    width: 100%;
+}
+.second-section table th {
+    width: 20%;
+    font-weight: 650;
+    padding: 20px;
+    background-color: #dadada;
+}
+.second-section table td {
+    padding: 20px;
+}
+.table-col {
+    color: #6283be;
+    font-weight: 700;
+}
+.search-btn a {
+    text-decoration: none;
+    color: #eaf2f8;
+    font-size: 20px;
+    background-color: #1d7480;
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.search-btn {
+    margin-bottom: 100px;
+}
+.search-btn a:hover {
+    color: #eaf2f8;
+}
+.attachments_ a {
+    display: inline-block;
+    color: #256aaf;
+    font-weight: 600;
+    text-decoration: none;
+}
+.download-all-file a {
+    text-decoration: none;
+    color: #eaf2f8;
+    font-size: 20px;
+    background-color: #1d7480;
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.download-all-file a:hover {
+    color: #eaf2f8;
+}
+#upload_ {
+    background-color: white;
+    padding: 0px 0px;
+    color: #256aaf;
+}
+.job-alert_ a{
+    text-decoration: none;
+    color: #eaf2f8;
+    font-size: 17px;
+    background-color: #1d7480;
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.job-alert_ a:hover {
+    color: #eaf2f8;
+}
+.content_ {
+    text-align: justify;
+}
+
+</style>
+
+<div class="first-section">
+    <div class="container">
+        <div class="row">
+            <h1>Company Name - Company Location</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="second-section mb-5">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md">
+                <h4>General Information</h4>
+                <p><b>Req #</b> WD00039810</p>
+                <p><b>Career Area:</b> Administrative</p>
+                <p><b>Country/Region:</b> United States of America</p>
+                <p><b>State:</b> North Carolina</p>
+                <p><b>City:</b> Morrisville</p>
+                <p><b>Date:</b> Monday, October 24, 2022</p>
+                <p><b>Working Time:</b> Full-time</p>
+                <p><b>Additional Locations: </b> Toronto - Ontario - Canada</p>
+                <div class="row">
+                    <hr>
+                </div>
+                <div class="row pt-4 second-section-row-5">
+                    <h4 class="d-flex align-items-center m-0">Why Work at Lenovo</h4>
+                    <p class="mt-3">Here at Lenovo, we believe in smarter technology that builds a brighter, more
+                        sustainable and inclusive future for our customers, colleagues, communities, and the planet.<br>
+                        <br> And we go big. No, not big—huge.<br> <br> We’re not just a US$70 billion revenue Fortune
+                        Global 500 company, we’re one of Fortune’s Most Admired. We’re transforming the world through
+                        intelligent transformation, offering the world’s most complete portfolio of smart devices,
+                        infrastructure, and solutions. With more than 71,500 employees doing business in 180 markets, we
+                        help millions—not just the select few—experience our version of a smarter future. <br> <br> The
+                        one thing that’s missing? Well… you...</p>
+                </div>
+
+                <div class="second-section-row-5">
+                    <p class="mt-3">
+                        <p>We’re not just a Fortune 500 company, we’re one of Fortune’s Most Admired. We’re in 180
+                            countries, working with 63,000 brilliant colleagues and counting. And we’re known for the
+                            world’s most complete portfolio of smart technology, from devices to software to
+                            infrastructure. With our ingenuity, we help millions—not just the select few—experience our
+                            version of a smarter future.</p>
+                        <p>The one thing that’s missing? Well… you...</p>
+                        <p>The North America President of ISG Sales needs a superstar for this highly impactful
+                            position: requiring a professional demeanor, excellent communication and organizational
+                            skills with the ability to work on a wide range of tasks and strategic initiatives. The
+                            Chief of Staff is a critically important role, enabling the President to work more
+                            effectively with internal and external stakeholders.</p>
+                        <p>This is not an administrative role - it is a highly strategic and facilitative role that
+                            requires a combination of focus and flexibility as well as a willingness to play an active,
+                            operational and communicative role.</p>
+                        <p>As the President &amp; GM’s ‘trusted counsel', the role requires strong emotional
+                            intelligence, self-motivation and strong analytical and interpersonal skills. The ideal
+                            candidate will possess a professional demeanor, excellent communication, and organizational
+                            skills with the ability to work on a wide range of tasks and strategic initiatives.&nbsp;
+                            You will operate as a key component in our management team effectiveness by contributing on
+                            strategy formation and enabling the executive team to work effectively with internal and
+                            external stakeholders.</p>
+                        <p><strong>Responsibilities: </strong></p>
+                        <ul>
+                            <li>Facilitate and manage the process of identifying, prioritizing, chartering,
+                                communicating, and managing key strategic projects</li>
+                            <li>Govern the NA strategic planning activities and help drive clarity and alignment across
+                                each functional organization</li>
+                            <li>Manage the process of tracking and communicating performance versus core business
+                                objectives</li>
+                            <li>Conduct market and financial analysis activities to support projects and business
+                                initiatives</li>
+                            <li>Support COO in his day to day activities (presentations to customers, executives and
+                                other external audiences, preparation for critical meetings and business reviews)</li>
+                            <li>Develops, implements, and ensures execution of focus areas, priorities, and strategies.
+                            </li>
+                            <li>Operates at a tactical, strategic, and operational level, handling the oversight of
+                                projects that do not neatly fit within the organizational chart or fall between
+                                leadership areas of responsibility.</li>
+                            <li>Supports the productivity of leadership/team meetings by owning the agenda, planning,
+                                and action items.</li>
+                            <li>Provides ad-hoc support on projects and key strategic initiatives as needed.</li>
+                            <li>Culture champion: develops programs and solutions that promote and align with the Lenovo
+                                Way.</li>
+                            <li>Monitor and identify priorities that require senior leadership focus.</li>
+                        </ul>
+                        <p><strong>Minimum Requirements:</strong></p>
+                        <ul>
+                            <li>7+ years of experience working in the technology industry</li>
+                            <li>5+ years in leadership or project leadership roles</li>
+                            <li>BA required</li>
+                        </ul>
+                        <p><strong>Position Requirements:</strong></p>
+                        <ul>
+                            <li>Strong analytical skills and ability to synthesize large amounts of information from
+                                multiple sources to draw conclusions.</li>
+                            <li>Ability to work effectively with and across all levels of business and IT contacts
+                                within very large and complex organizations</li>
+                            <li>Ability to navigate Lenovo and build great work relationships through collaboration,
+                                spanning Product, Sales, Marketing, Finance and Category.</li>
+                            <li>Strong interpersonal and communications skills</li>
+                            <li>Demonstrated team building experience, leadership, and the ability to manage multiple
+                                complex projects engagements concurrently</li>
+                            <li>Keen business and financial acumen – understand our strategy and govern the strategic
+                                plan and offer recommendations for improvement</li>
+                            <li>Ability to give and receive feedback and constructive criticism.</li>
+                            <li>Technology Industry Knowledge (Client &amp; Server preferred)</li>
+                            <li>Raleigh, NC is the preferred location.&nbsp; Position operates with an orientation to
+                                the Eastern Time Zone.&nbsp; Some business travel is required (~35%).</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 in-2-second-section">
+                <a class="outline-btn" href="#">Apply</a>
+                <p>If you require an accommodation to complete this application, please contact <a href="mailto:ability@lenovo.com">ability@lenovo.com</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@include('pages.common.footer')
+@endsection
