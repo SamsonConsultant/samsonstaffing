@@ -739,7 +739,7 @@ class OtherContentController extends Controller
             $all_job = JobManageMent::whereIn('id', $items_id)->get();            
             
             // send mail here..
-            /*$get_view_data['subject']    =   $request->subject;
+            $get_view_data['subject']    =   $request->subject;
             $get_view_data['view']       =   'mails.bulk-mail';
             $get_view_data['user']       =   [
                 'name' =>  'Dear',
@@ -747,7 +747,7 @@ class OtherContentController extends Controller
                 'total_user' => count($all_job),
                 'all_job' => $all_job,
                 'mail_format' => $request->mail_format,
-            ];*/
+            ];
 
             // another way
             $user = [
@@ -767,7 +767,7 @@ class OtherContentController extends Controller
 
             try{
                 $up_job = JobManageMent::whereIn('id', $items_id)->update(['updated_by' => $request->user_id]);
-                // $mail = Mail::to($all_email)->send(new MainTemplate( $get_view_data ));
+                $mail = Mail::to($all_email)->send(new MainTemplate( $get_view_data ));
                 $response = sendMail($js_data);
                 $code = json_decode($response);
                 if($code->flag){

@@ -114,24 +114,24 @@
                         <span>Disqualified CV</span>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->is('admin/job/stage/six') ? 'active' : '' }}">
+                <!-- <li class="nav-item {{ request()->is('admin/job/stage/six') ? 'active' : '' }}">
                     <a href="{{ route("admin.job.stage.six") }}" class="nav-link">
                         <i class="fa-fw fas fa-briefcase nav-icon"></i>
                         <span>Stage 6</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item {{ request()->is('admin/job/stage/seven') ? 'active' : '' }}">
                     <a href="{{ route("admin.job.stage.seven") }}" class="nav-link">
                         <i class="fa-fw fas fa-briefcase nav-icon"></i>
                         <span>All CVs</span>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->is('admin/job/stage/eight') ? 'active' : '' }}">
+                <!-- <li class="nav-item {{ request()->is('admin/job/stage/eight') ? 'active' : '' }}">
                     <a href="{{ route("admin.job.stage.eight") }}" class="nav-link">
                         <i class="fa-fw fas fa-briefcase nav-icon"></i>
                         <span>Stage 8</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </li>
