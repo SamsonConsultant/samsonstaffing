@@ -23,6 +23,13 @@
                 }
             })
         });
+        $(document).on('click','#select_all',function(){
+            if ($(this).prop('checked')==true){ 
+                $(".check_class").attr("checked", true);
+            }else{
+                $(".check_class").attr("checked", false);
+            }
+        });
     });
 </script>
 @endpush

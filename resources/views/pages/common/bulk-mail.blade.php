@@ -38,9 +38,13 @@
                             </div>
                         </div>
                         <div class="col-sm-12">
+                            <div class="form-check form-check-inline">
+                                <input id="select_all" class="form-check-input" type="checkbox" value="" name="">
+                                <label for="Select All">Select All</label>
+                            </div><br/>
                             @foreach(getMailFormate() as $k => $m)
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" value="{{ $m }}" name="mail_format[]">
+                                    <input class="form-check-input check_class" type="checkbox" value="{{ $m }}" name="mail_format[]">
                                     <label for="{{ $m }}">{{ $m }}</label>
                                 </div>
                             @endforeach
