@@ -438,7 +438,8 @@ class AdminDashboardController extends Controller
             }
         }
 
-        $jobs = $get_order->where('job_manage_ments.status', $status)->orderBy('job_manage_ments.id', 'DESC')->paginate($this->per_page);
+        //$jobs = $get_order->where('job_manage_ments.status', $status)->orderBy('job_manage_ments.id', 'DESC')->paginate($this->per_page);
+        $jobs = $get_order->orderBy('job_manage_ments.id', 'DESC')->paginate($this->per_page);
 
         return view('pages.admin.job-stage', compact('template', 'segments', 'jobs','country', 'state', 'all_job', 'account', 'contact', 'project'));   
     }
