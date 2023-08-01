@@ -6,6 +6,7 @@
         font-weight: 600;
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
 @endpush
 
 @push('js')
@@ -27,6 +28,12 @@ $(document).ready(function() {
         })
     });
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+<script type="text/javascript">
+    new TomSelect(".tom-select",{
+        create: true,
+    });
 </script>
 @endpush
 
@@ -203,7 +210,7 @@ $(document).ready(function() {
             <div class="col-md-6">
                 <div class="form-group {{ $errors->has('key_skills') ? 'has-error' : '' }}">
                     <label for="key_skills">Key Skills <span class="astrick">*</span></label>
-                    <select name="key_skills[]" class="form-control select2" required multiple>
+                    <select name="key_skills[]" class="tom-select" required multiple>
                         <option value="">-- Select --</option>
                         @forelse($skills as $post)
                             <option value="{{ $post['post_title'] }}">{{ $post['post_title'] }}</option>
