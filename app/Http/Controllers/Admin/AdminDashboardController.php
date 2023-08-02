@@ -410,7 +410,7 @@ class AdminDashboardController extends Controller
         $status = getStageStatusType($template);
 
         $get_order = (new JobManageMent)->newQuery();
-        $get_order->join('users AS pe', 'job_manage_ments.user_id', '=', 'pe.id');
+        $get_order->join('users AS pe', 'job_manage_ments.user_id', '=', 'pe.id')->where('job_manage_ments.status', $status);
         $get_order->select('job_manage_ments.*', 'pe.id as u_id');
         if($request->all()){
             if ($request->has('s') && $request->filled('s')) {
