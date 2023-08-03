@@ -23,11 +23,16 @@
                 }
             })
         });
-        $(document).on('click','#select_all',function(){
-            if ($(this).prop('checked')==true){ 
-                $(".check_class").attr("checked", true);
-            }else{
-                $(".check_class").attr("checked", false);
+
+        $("#select_all").change(function () {
+            $("#select_all").prop('checked', $(this).prop("checked"));
+            $(".check_class").prop('checked', $(this).prop("checked"));
+        });
+        $('.check_class').on('click', function () {
+            if ($('.check_class:checked').length == $('.check_class').length) {
+            $('#select_all').prop('checked', true);
+            } else {
+            $('#select_all').prop('checked', false);
             }
         });
     });
