@@ -252,6 +252,14 @@
                         <span>Account Type</span>
                     </a>
                 </li>
+
+                <li class="nav-item {{ request()->is('admin/stage_email') || request()->is('admin/stage_email/*') ? 'active' : '' }}">
+                    <a href="{{ route("admin.stage_email.index") }}" class="nav-link">
+                        <i class="fa fa-circle"></i>
+                        <span>Send Stage Email To</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </li>

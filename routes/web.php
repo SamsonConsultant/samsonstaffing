@@ -198,6 +198,10 @@ Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin'], function
     # create a user form contact...
     Route::get('create/user/{id}', 'OtherContentController@storeUserFromContact')->name('create.user');
     Route::get('search/cv', 'AdminDashboardController@getSearchCv')->name('search.cv');
+
+    Route::delete('stage_email/destroy', 'StageEmailController@massDestroy')->name('stage_email.massDestroy');
+    Route::resource('stage_email', 'StageEmailController');
+
 });
 
 # employer routes..

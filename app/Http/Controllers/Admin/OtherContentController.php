@@ -22,6 +22,7 @@ use App\Models\JobManageMent;
 use App\Models\Job;
 use App\Models\Project;
 use App\Models\Contact;
+use App\Models\StageEmail;
 
 use App\Mail\MainTemplate;
 
@@ -702,10 +703,20 @@ class OtherContentController extends Controller
      * 
      */
     public function changeJobStatus($job_id, $status_id, $user_id){
-        $job = JobManageMent::where('id', $job_id)->first();
+        $job = JobManageMent::with('user')->where('id', $job_id)->first();
         $job->status = $status_id;
         $job->updated_by = $user_id;
         $job->save();
+
+        //$all_to_email = ['pushpasaini1004@gmail.com','hs24032002@gmail.com'];
+        $all_to_email = StageEmail::all()->pluck('email')->toArray();
+        $get_view_data['subject']    =   'Selected for stage '.$job->status;
+        $get_view_data['view']       =   'mails.stage-mail';
+        $get_view_data['user']       =   $job->user;
+        $get_view_data['stage']      =   $job->status;
+        
+        $mail = Mail::to($all_to_email)->send(new MainTemplate( $get_view_data ));
+
         return redirect()->back()->with('success', 'Action completed.');
     }
 
